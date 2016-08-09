@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="326b696e-9d96-44ac-894c-c4941ce55cf8" name="Default" comment="">
+    <list default="true" id="326b696e-9d96-44ac-894c-c4941ce55cf8" name="Default" comment="Duplicates.html">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="data_processing.iws" />
@@ -994,7 +994,7 @@
       <workItem from="1470580049903" duration="3375000" />
       <workItem from="1470641849962" duration="17444000" />
       <workItem from="1470687296114" duration="13328000" />
-      <workItem from="1470750371293" duration="10133000" />
+      <workItem from="1470750371293" duration="10597000" />
     </task>
     <task id="LOCAL-00001" summary="Duplicate events are handled.">
       <created>1470760781471</created>
@@ -1003,11 +1003,18 @@
       <option name="project" value="LOCAL" />
       <updated>1470760781471</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Duplicates.html">
+      <created>1470761080963</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1470761080963</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73288000" />
+    <option name="totallyTimeSpent" value="73752000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1295" height="772" extended-state="6" />
@@ -1054,7 +1061,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Duplicate events are handled." />
-    <option name="LAST_COMMIT_MESSAGE" value="Duplicate events are handled." />
+    <MESSAGE value="Duplicates.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Duplicates.html" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
