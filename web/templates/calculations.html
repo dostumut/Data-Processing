@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h4>Calculations</h4>
+<div class="row">
+    <hr/>
+    <div class="col s12 calculation-item">
+        <p>How many events per application are available?</p>
+        <a id="run-number-of-events" class="waves-effect waves-light btn">RUN</a>
+        <p id="number-of-events-progress"></p>
+    </div>
+    <hr/>
+    <div class="col s12 calculation-item">
+        <p>How many times a particular product launched and other events during this time period?</p>
+        <a id="run-number-of-launch" class="waves-effect waves-light btn" >RUN</a>
+        <p id="number-of-launch-progress"></p>
+    </div>
+    <hr/>
+    <div class="col s12 calculation-item">
+        <p>How many first-time launches can you detect for this product?</p>
+        <a id="run-first-time-amount" class="waves-effect waves-light btn" disabled>RUN</a>
+        <p></p>
+    </div>
+    <hr/>
+    <div class="col s12 calculation-item">
+        <p>Can you detect duplicated events?</p>
+        <a id="run-find-duplicates" class="waves-effect waves-light btn" disabled>RUN</a>
+        <p></p>
+    </div>
+    <hr/>
+</div>
+{% endblock %}
