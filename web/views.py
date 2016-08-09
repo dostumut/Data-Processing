@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from web.tasks import do_amount_of_events_per_application_calculation
 from web.tasks import do_product_launched_calculation
-
+from web.tasks import do_duplicates_calculation
 
 @csrf_exempt
 def run_amount_of_events_per_application(request):
@@ -15,6 +15,11 @@ def run_amount_of_events_per_application(request):
 @csrf_exempt
 def run_amount_of_launch(request):
     job = do_product_launched_calculation.delay()
+    return JsonResponse({'job_id': job.id})
+
+@csrf_exempt
+def run_amount_of_duplicates(request):
+    job = do_duplicates_calculation.delay()
     return JsonResponse({'job_id': job.id})
 
 
@@ -50,6 +55,16 @@ def amount_of_launch_result(request):
 
     job = AsyncResult(job_id)
     return render(request, "amount_of_launch.html", {'applications': job.result})
+
+
+def amount_of_duplicates_result(request):
+    if 'job_id' in request.GET:
+        job_id = request.GET['job_id']
+    else:
+        return HttpResponse('No job id given.')
+
+    job = AsyncResult(job_id)
+    return render(request, "duplicates.html", {'applications': job.result})
 
 
 def calculations(request):

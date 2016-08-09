@@ -41,5 +41,28 @@ $(document).ready(function () {
             }, 1000);
         });
     });
-    
+
+    //run duplicate events
+    $('#run-find-duplicates').click(function () {
+        $.post('/run_amount_of_duplicates', function (data) {
+            var job_id = data.job_id;
+            var interval = setInterval(function () {
+                $.getJSON('/poll_state',
+                    {'job_id': job_id},
+                    function (data) {
+                        if (data.state === "PROGRESS") {
+                            console.log(JSON.stringify(data));
+                            $('#number-of-duplicates-progress')
+                                .text('Progress: ' + ((data.result.current / data.result.total) * 100).toFixed(2) + '%');
+                        }
+                        if (data.state === "SUCCESS") {
+                            clearInterval(interval);
+                            window.location = '/amount_of_duplicates_result?job_id=' + job_id;
+                        }
+                    });
+            }, 1000);
+        });
+    });
+
+
 });

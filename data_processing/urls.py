@@ -17,7 +17,8 @@ from django.conf.urls import url
 from django.contrib import admin
 
 from web.views import calculations, visualization, run_amount_of_events_per_application, \
-    poll_state, amount_of_events_result, run_amount_of_launch, amount_of_launch_result
+    poll_state, amount_of_events_result, run_amount_of_launch, amount_of_launch_result, run_amount_of_duplicates, \
+    amount_of_duplicates_result
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -26,7 +27,9 @@ urlpatterns = [
     url(r'^visualization/', visualization, name='visualization'),
     url(r'^run_amount_of_events_per_application', run_amount_of_events_per_application),
     url(r'^run_amount_of_launch', run_amount_of_launch),
+    url(r'^run_amount_of_duplicates', run_amount_of_duplicates),
     url(r'^poll_state', poll_state),
     url(r'^amount_of_events_result', amount_of_events_result),
     url(r'^amount_of_launch_result', amount_of_launch_result),
+    url(r'^amount_of_duplicates_result', amount_of_duplicates_result),
 ]
